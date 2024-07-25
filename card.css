@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+   margin-top: auto;
+   margin-bottom: auto;
+  
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+.left, .right {
+    width: 100%;
+    padding: 20px;
+}
+
+.left p, .right p {
+    font-weight: bold;
+}
+
+.methods div {
+    padding: 7px 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.methods div:hover {
+    box-shadow: 0 0 10px rgba(172, 255, 47, 0.16);
+}
+
+.methods div::after {
+    content: '';
+    display: inline-block;
+    color: greenyellow;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 4px 0 4px 4px;
+    border-left-color: var(--fondy-success);
+    margin-left: 10px;
+}
+
+.fa-solid {
+    margin-right: 10px;
+    font-size: 22px;
+    color: #aaa;
+}
+
+.center {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .center {
+        border-top: none;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+}
+
+.center a {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details .c-number {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 0 12px;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+.c-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.cc-exp, .cc-cvv {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    height: 50px;
+    margin-top: 10px;
+    padding: 12px;
+    width: 100%;
+    max-width: 150px;
+}
+
+.details {
+    margin-top: 20px;
+}
+
+.details input {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 12px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    border: none;
+    height: 50px;
+    border-radius: 3px;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #444;
+    background-color: greenyellow;
+}
+
+button:hover {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,2299 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color:#222;
+
+}
+
+h6{
+     font-weight: 700;
+     font-size: 12px;
+
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+
+}
+
+.section-p1{
+    padding: 40px 80px;
+
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+button.normal{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #f50d0d;
+  background-color: #bebcbc;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+button.add-to-cart{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #f50d0d;
+  background-color: #bebcbc;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+button.white{
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  transition: 0.2s;
+}
+
+body{
+    width: 100%;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgb(0,0,0,0.06);
+   background-repeat: no-repeat;
+   shape-margin: 0.75;
+
+}
+
+#nav-button{
+  display:flex;
+
+}
+
+#navigationBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 160px;
+}
+
+#navigationBar li{
+    list-style: none;
+    padding: 0 20px;
+    position:relative;
+
+}
+
+#navigationBar li a{
+ /* */
+ text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+/* for our hover effect with changing its color when mouse comes over*/ 
+#navigationBar li a:hover,
+#navigationBar li a.active{
+ color: #7a040e;
+
+}
+
+/* This is where when you hover it shows the line and color*/
+#navigationBar li a.active::after,
+#navigationBar li a:hover::after{
+    content: "";
+    width:30%;
+    height: 2px;
+    background: #7a040e;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile{
+  display: none;
+  align-items: center;
+
+}
+
+#close{
+  display: none;
+}
+
+#nav-button button:hover{
+  background: #22b8ae;
+  color: #fff;
+ }
+
+
+/* Home Page */
+#hero{
+    
+    
+  height: 90vh;
+  width:  100;
+    
+    position:relative;
+    place-items: center;
+    display: grid;
+
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #000000;
+
+}
+
+#hero::before{
+  background-image: url("Uruswhitefront.jpg");
+  background-size: cover;
+    /*background-position: top 25% right 0;*/
+    position:absolute;
+    inset:0;
+  content: '';
+  opacity: 0.20;
+}
+
+
+
+#hero h4{
+  color: rgb(202, 0, 0);
+  padding-bottom: 15px;
+  padding-left: 400px;
+  isolation: isolate;
+
+}
+
+#hero h1{
+    color: rgba(119, 118, 118, 0.904);
+    padding-bottom: 15px;
+    padding-left: 200px;
+    isolation: isolate;
+  }
+
+  #hero h2{
+    color: rgba(119, 118, 118, 0.904);
+    padding-bottom: 15px;
+    padding-left: 300px;
+    isolation: isolate;
+  }
+
+  #hero p{
+    color: rgb(202, 0, 0);
+    padding-bottom: 15px;
+    padding-left: 100px;
+    isolation: isolate;
+  }
+
+  #hero button{
+ 
+    background-color: rgba(226, 223, 223, 0.726);
+    color: rgb(202, 0, 0);
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-family: serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding-left: 100px;
+    isolation: isolate;
+  }
+
+  #hero:hover button{
+    background:#088178;
+    border: 1px solid #088178;
+  }
+
+
+  /* Features */
+
+  #feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #E3E6F3;
+  }
+
+  #feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgb(0, 0, 0, 0.03);
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin: 15px 0;
+
+
+  }
+
+  #feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgb(70, 62, 221,0.1);
+
+  }
+  #feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #feature .fe-box h6{
+    display:inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+    
+
+  }
+
+  #feature .fe-box:nth-child(2) h6{
+
+    background-color: #f1d9a5;
+  }
+
+  #feature .fe-box:nth-child(3) h6{
+
+    background-color: #c5c5c5;
+  }
+
+  #feature .fe-box:nth-child(4) h6{
+
+    background-color: #9dafae;
+  }
+
+  #feature .fe-box:nth-child(5) h6{
+
+    background-color: #8ec2e0;
+  }
+
+  
+  #serprod .bub img{
+    width: 50px;
+    animation: bubble 7s linear infinite;
+   }
+  
+   .bub{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    
+   
+   }
+  
+   @keyframes bubble {
+          0%{
+            transform: translateY(0);
+            opacity: 0;
+            
+          }
+          50%{
+            
+            opacity: 1;
+            
+          }
+          70%{
+            
+            opacity: 1;
+            
+          }
+          100%{
+            transform: translateY(-200vh);/* this is where you can control how fast and far you want the bubbles to go!*/
+            opacity: 0;
+            
+          }
+   }
+  
+   #serprod .bub img:nth-child(1){
+    animation-delay: 2s;
+    
+   }
+   #serprod .bub img:nth-child(2){
+    animation-delay: 1s;
+  
+   }
+   #serprod .bub img:nth-child(3){
+    animation-delay: 3s;
+  
+   }
+   #serprod .bub img:nth-child(4){
+    animation-delay: 4.5s;
+  
+   }
+   #serprod .bub img:nth-child(5){
+    animation-delay: 3s;
+  
+   }
+   #serprod .bub img:nth-child(6){
+    animation-delay: 6s;
+  
+   }
+   #serprod .bub img:nth-child(7){
+    animation-delay: 7s;
+  
+   }
+
+ #serprod .container {
+   
+   height: 50vh;
+   width:  80;
+   padding-top: 30px;
+  
+  }
+  
+  li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    list-style: none;
+  }
+
+  li.se2{
+    padding-bottom: 15px;
+    padding-right: 200px;
+    
+  }
+
+  li.se3{
+    padding-bottom: 15px;
+    padding-right: 300px;
+    padding-left: 20px
+  }
+
+  li.se4{
+    padding-bottom: 15px;
+    padding-right: 400px;
+    
+  }
+  li.se5{
+    padding-bottom: 15px;
+    padding-right: 500px;
+  }
+  li.se6{
+    padding-bottom: 15px;
+    padding-right: 600px;
+  }
+  li.se7{
+    padding-bottom: 15px;
+    padding-right: 700px;
+  }
+  li.se8{
+    padding-bottom: 15px;
+    padding-right: 800px;
+  }
+  li.se9{
+    padding-bottom: 15px;
+    padding-right: 900px;
+  }
+
+
+  /*Booking page */
+  
+ 
+
+
+  /* maybe add another picture??
+  #feature{
+    background-image: url("4T's/4tyyssBackground.jpg");
+    height: 50vh;
+    width:  80;
+      background-size: cover;
+      background-position: top 25% right 0;
+  
+      padding: 0 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+  } */
+
+
+  /*About us */
+  #aboutus {
+    border-width: 40px;
+
+    border: 2px solid red;
+    border-radius: 0 60px 0 60px;
+    
+    padding: 20px;
+	  margin: auto;
+    width: 700px;
+    height: auto;
+    text-align: center;
+  }
+
+  #aboutus{
+    
+      
+      position:relative;
+      place-items: center;
+      display: grid;
+  
+      padding: 0 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+   
+  }
+
+  #heading .bub img{
+    width: 50px;
+    animation: bubble 7s linear infinite;
+   }
+  
+   .bub{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    
+   
+   }
+  
+   @keyframes bubble {
+          0%{
+            transform: translateY(0);
+            opacity: 0;
+            
+          }
+          50%{
+            
+            opacity: 1;
+            
+          }
+          70%{
+            
+            opacity: 1;
+            
+          }
+          100%{
+            transform: translateY(-200vh);/* this is where you can control how fast and far you want the bubbles to go!*/
+            opacity: 0;
+            
+          }
+   }
+  
+   #heading .bub img:nth-child(1){
+    animation-delay: 2s;
+    
+   }
+   #heading .bub img:nth-child(2){
+    animation-delay: 1s;
+  
+   }
+   #heading .bub img:nth-child(3){
+    animation-delay: 3s;
+  
+   }
+   #heading .bub img:nth-child(4){
+    animation-delay: 4.5s;
+  
+   }
+   #heading .bub img:nth-child(5){
+    animation-delay: 3s;
+  
+   }
+   #heading .bub img:nth-child(6){
+    animation-delay: 6s;
+  
+   }
+   #heading .bub img:nth-child(7){
+    animation-delay: 7s;
+  
+   }
+/* When you want to create A box easy use the code below*/
+  #heading{
+    margin-top: 100px;
+    margin-bottom: auto;
+    color: rgba(119, 118, 118, 0.904);
+    text-decoration: #1a1a1a;
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #ff1212;
+    color: #ffffff;
+    padding: 10px 20px;
+    width: 40%;
+    
+  }
+
+  
+ /*  This below is for the testimonals*/
+  a{
+    text-decoration: none;
+
+  }
+
+  #testimonals{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    font-family:'Times New Roman', Times, serif;
+   }
+  
+   .testimonals-heading{
+    letter-spacing: 1px;
+    margin:30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: popins;
+   }
+
+   .testimonals-heading h1{
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #8f8f8f;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-family: popins;
+   }
+
+   .testimonals-heading span{
+    font-size: 1.3rem;
+    color: #252525;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: popins;
+   }
+ 
+
+ .testimonal-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: popins;
+ }
+
+ .testimonal-box{
+  width: 500px;
+  box-shadow:  2px 2px 30px rgb(0, 0, 0,0.1);
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  
+ }
+
+ /* How to make the profile image */
+ .profile-img{
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+  overflow: hidden;
+  margin-right: 10px;
+ }
+
+ .profile-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+ }
+
+ .profile{
+  display: flex;
+  align-items: center;
+
+ }
+
+ .name-user{
+  display: flex;
+  flex-direction: column;
+ }
+
+ .name-user strong{
+  color:#3d3d3d;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+ }
+  
+ .name-user span{
+  color: #979797;
+  font-size: 0.8rem;
+
+ }
+
+ .reviews{
+  color: #f9d71c;
+
+ }
+
+ .box-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+ }
+
+ .client-comment p{
+  font-size: 0.9rem;
+  color: #4b4b4b;
+  font-family:cursive;
+ }
+
+ #testimonals .bub img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+  cursor: pointer; 
+ }
+
+ .bub{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  
+ 
+ }
+
+ @keyframes bubble {
+        0%{
+          transform: translateY(0);
+          opacity: 0;
+          
+        }
+        50%{
+          
+          opacity: 1;
+          
+        }
+        70%{
+          
+          opacity: 1;
+          
+        }
+        100%{
+          transform: translateY(-200vh);/* this is where you can control how fast and far you want the bubbles to go!*/
+          opacity: 0;
+          
+        }
+ }
+
+ /* Pop effect */
+.pop {
+  animation: pop 0.3s forwards;
+}
+
+@keyframes pop {
+  to {
+      transform: scale(0);
+      opacity: 0;
+  }
+}
+
+ #testimonals .bub img:nth-child(1){
+  animation-delay: 2s;
+  
+ }
+ #testimonals .bub img:nth-child(2){
+  animation-delay: 1s;
+
+ }
+ #testimonals .bub img:nth-child(3){
+  animation-delay: 3s;
+
+ }
+ #testimonals .bub img:nth-child(4){
+  animation-delay: 4.5s;
+
+ }
+ #testimonals .bub img:nth-child(5){
+  animation-delay: 3s;
+
+ }
+ #testimonals .bub img:nth-child(6){
+  animation-delay: 6s;
+
+ }
+ #testimonals .bub img:nth-child(7){
+  animation-delay: 7s;
+
+ }
+
+ .testimonal-box:hover{
+  transform: translate(-10px);
+  transition: all ease 0.3s;
+ }
+
+ @media(max-width:1060px){
+  .testimonal-box{
+    width:45%;
+    padding:10px;
+  }
+ }
+
+ @media(max-width:790px){
+  .testimonal-box{
+    width:100%
+  }
+  .testimonal-heading h1{
+    font-size:1.4rem;
+  }
+ }
+
+ @media(max-width:340px){
+  .box-top{
+    flex-wrap: wrap;
+    margin-bottom:10px;
+  }
+  .reviews{
+    margin-top: 10px;
+  }
+ }
+
+ /* How to center you writing */
+ #banner{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(banner.jpg);
+ 
+  background-color: #000000;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  
+ }
+
+ 
+ #banner h4{
+  color: #000000;
+  font-size: 16px;
+
+ }
+
+ #banner h2{
+  color: #000000;
+  font-size: 30px;
+  padding-top: -15px;
+ }
+
+ #banner h2 span{
+  color: hsl(204, 84%, 64%);
+  
+
+ }
+
+ #banner button:hover{
+  background: #22b8ae;
+  color: #fff;
+
+ }
+
+
+
+/* How to start adding bubbles */
+ #bubbles .bub img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+ }
+
+ .bub{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  
+ 
+ }
+
+ @keyframes bubble {
+        0%{
+          transform: translateY(0);
+          opacity: 0;
+          
+        }
+        50%{
+          
+          opacity: 1;
+          
+        }
+        70%{
+          
+          opacity: 1;
+          
+        }
+        100%{
+          transform: translateY(-200vh);/* this is where you can control how fast and far you want the bubbles to go!*/
+          opacity: 0;
+          
+        }
+ }
+
+ /* creating the delay of the bubbles each bubble has its own delay */
+ #bubbles .bub img:nth-child(1){
+  animation-delay: 2s;
+  
+ }
+ #bubbles .bub img:nth-child(2){
+  animation-delay: 1s;
+
+ }
+ #bubbles .bub img:nth-child(3){
+  animation-delay: 3s;
+
+ }
+ #bubbles .bub img:nth-child(4){
+  animation-delay: 4.5s;
+
+ }
+ #bubbles .bub img:nth-child(5){
+  animation-delay: 3s;
+
+ }
+ #bubbles .bub img:nth-child(6){
+  animation-delay: 6s;
+
+ }
+ #bubbles .bub img:nth-child(7){
+  animation-delay: 7s;
+
+ }
+
+ #sm-banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start; 
+ }
+ 
+
+ #sm-banner .banner-box{ 
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 60vh;
+    min-width: 580px;
+    background-color: #000000;
+    background-position: center;
+    padding: 30px;
+
+}
+
+#sm-banner .banner-box::before{
+  background-image: url("gushheee.jpg");
+  background-size: cover;
+    /*background-position: top 25% right 0;*/
+    position:absolute;
+    inset:0;
+    content: ''; 
+    opacity: 0.35;
+}
+
+#sm-banner .banner-box2{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 60vh;
+  min-width:  580px;
+  background-color: #000000;
+  background-position: center;
+  padding: 30px;
+}
+#sm-banner .banner-box2::before{
+  background-image: url("c63bannerwhole.jpg");
+  background-size: cover;
+    /*background-position: top 25% right 0;*/
+    position:absolute;
+    inset:0;
+    content: ''; 
+    opacity: 0.35;
+}
+
+
+
+#sm-banner  h4{
+  color:#fcf5f5;
+  font-size: 20px;
+  
+}
+
+#sm-banner h2{
+  color:#fcf5f5;
+  font-size: 28px;
+  font-weight:800;
+
+}
+
+#sm-banner span{
+  color:#fcf5f5;
+  font-size: 14px;
+  font-weight:500;
+  padding-bottom: 15px;
+
+}
+
+#sm-banner .banner-box:hover button{
+  background:#088178;
+  border: 1px solid #088178;
+}
+
+#sm-banner .banner-box2:hover button{
+  background:#088178;
+  border: 1px solid #088178;
+}
+
+/* When we want to make our banners be one direction. */
+#banner3{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30px;
+
+}
+
+#banner3 .banner-box{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 40vh;
+  min-width:  32%;
+  background-color: #000000;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+
+#banner3 .banner-box::before{
+background-image: url("4T's/275015779_680258310060354_1192868877133424961_n.jpg");
+background-size: cover;
+/*background-position: top 25% right 0;*/
+position:absolute;
+inset:0;
+content: ''; 
+opacity: 0.35;
+}
+
+#banner3 h2{
+
+  color:#fff;
+  font-weight: 900;
+  font-size:22px;
+
+
+}
+
+#banner3 h3{
+  color:#690b0b;
+  font-weight: 800;
+  font-size: 15px;
+  
+
+}
+
+#banner3 .banner-box2{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 40vh;
+  min-width:  32%;
+  background-color: #000000;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+
+#banner3 .banner-box2::before{
+background-image: url("LogoFinal.jpg");
+background-size: cover;
+/*background-position: top 25% right 0;*/
+position:absolute;
+inset:0;
+content: ''; 
+opacity: 0.35;
+}
+
+#banner3 .banner-box3{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 40vh;
+  min-width:  32%;
+  background-color: #000000;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+
+#banner3 .banner-box3::before{
+background-image: url("gueshblue.jpg");
+background-size: cover;
+/*background-position: top 25% right 0;*/
+position:absolute;
+inset:0;
+content: ''; 
+opacity: 0.35;
+}
+
+#newsletter .bub img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+ }
+
+ .bub{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  
+ 
+ }
+
+ @keyframes bubble {
+        0%{
+          transform: translateY(0);
+          opacity: 0;
+          
+        }
+        50%{
+          
+          opacity: 1;
+          
+        }
+        70%{
+          
+          opacity: 1;
+          
+        }
+        100%{
+          transform: translateY(-200vh);/* this is where you can control how fast and far you want the bubbles to go!*/
+          opacity: 0;
+          
+        }
+ }
+
+ /* creating the delay of the bubbles each bubble has its own delay */
+ #newsletter.bub img:nth-child(1){
+  animation-delay: 2s;
+  
+ }
+ #newsletter .bub img:nth-child(2){
+  animation-delay: 1s;
+
+ }
+ #newsletter .bub img:nth-child(3){
+  animation-delay: 3s;
+
+ }
+ #newsletter .bub img:nth-child(4){
+  animation-delay: 4.5s;
+
+ }
+ #newsletter .bub img:nth-child(5){
+  animation-delay: 3s;
+
+ }
+ #newsletter .bub img:nth-child(6){
+  animation-delay: 6s;
+
+ }
+ #newsletter .bub img:nth-child(7){
+  animation-delay: 7s;
+
+ }
+
+#newsletter{
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  background-color: #000000;
+  background-position: 20% 30%;
+
+}
+
+#newsletter::before{
+  background-image: url("M2Back2.jpg");
+  background-size: cover;
+  /*background-position: top 25% right 0;*/
+  position:absolute;
+  inset:0;
+  content: ''; 
+  opacity: 0.05;
+}
+
+#newsletter h4{
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+#newsletter p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #818ea0;
+}
+
+#newsletter span{
+  color: #3fa0fc;
+}
+
+#newsletter .Form{
+  display: flex;
+  width: 40%;
+}
+
+#newsletter input{
+  height: 3.125rem;
+  padding: 0 1.23em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#newsletter button{
+  background-color: #3fa0fc;
+  color: #fff;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+footer{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ /* background-image: url("4T's/cars-wallpaper-1.jpg");
+  background-repeat: no-repeat; */
+}
+
+footer .col{
+  display:flex;
+  flex-direction: column;
+ align-items: flex-start;
+ margin-bottom: 20px;
+ padding-left: 50px;
+}
+
+footer .logo{
+  margin-bottom: 30px;
+
+}
+
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
+
+}
+
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+
+
+}
+
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+  
+
+}
+
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .row1{
+  height: 10vh;
+  
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  
+}
+
+footer .follow{
+  margin-top: 20px;
+
+}
+
+footer .follow i{
+ color:#465b52;
+ padding-right: 4px;
+ cursor: pointer;
+
+}
+
+
+footer .install img{
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover{
+  color: #088178;
+
+}
+
+#foot .bub img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+ }
+
+ .bub{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  
+ 
+ }
+
+ @keyframes bubble {
+        0%{
+          transform: translateY(0);
+          opacity: 0;
+          
+        }
+        50%{
+          
+          opacity: 1;
+          
+        }
+        70%{
+          
+          opacity: 1;
+          
+        }
+        100%{
+          transform: translateY(-200vh);/* this is where you can control how fast and far you want the bubbles to go!*/
+          opacity: 0;
+          
+        }
+ }
+
+ /* creating the delay of the bubbles each bubble has its own delay */
+ #foot.bub img:nth-child(1){
+  animation-delay: 2s;
+  
+ }
+ #foot .bub img:nth-child(2){
+  animation-delay: 1s;
+
+ }
+ #foot .bub img:nth-child(3){
+  animation-delay: 3s;
+
+ }
+ #foot .bub img:nth-child(4){
+  animation-delay: 4.5s;
+
+ }
+ #foot .bub img:nth-child(5){
+  animation-delay: 3s;
+
+ }
+ #foot .bub img:nth-child(6){
+  animation-delay: 6s;
+
+ }
+ #foot .bub img:nth-child(7){
+  animation-delay: 7s;
+
+ }
+
+ /* Shop Page including service Page*/ 
+
+
+ #page-header{
+  height: 40vh;
+  width:  100%;
+    
+    position:relative;
+    place-items: center;
+    display: grid;
+
+    padding: 0 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #000000;
+    background-size: cover;
+    text-align: center;
+}
+
+#page-header::before{
+  background-image: url("M2Banner1.jpg");
+  background-size: cover;
+    /*background-position: top 25% right 0;*/
+    position:absolute;
+    inset:0;
+  content: '';
+  opacity: 0.15;
+}
+
+#page-header h2{
+  color: #ffffff;
+}
+
+#page-header p{
+  color: #f10b0b;
+}
+
+
+#product1{
+  text-align: center
+}
+
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap:wrap;
+}
+
+#product1 .pro{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+
+}
+
+#product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+
+#product1 .pro img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+#product1 .pro .des{
+  text-align:  start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span{
+  color: #606063;
+  font-size: 12px;
+}
+
+#product1 .pro .des h5{
+  color: #1a1a1a;
+  padding-top: 7px;
+  font-size: 14px;
+
+}
+
+#product1 .pro .des i{
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+
+}
+
+#product1 .pro .des h4{
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#product1 .pro .cart{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absoulte;
+  bottom: 20px;
+  right: 10px;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination  a{
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #ffff;
+  font-weight: 600;
+}
+
+#pagination  a i{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*Single Product */
+#prodetails{
+  display: flex;
+  margin-top: 10px;
+
+}
+
+#prodetails .single-pro-image{
+  width: 40%;
+  margin-right: 50px;
+
+}
+
+.small-img-group{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.small-img-col{
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+#prodetails .single-pro-details{
+  width: 50%;
+  padding-top: 30px;
+
+}
+
+#prodetails .single-pro-details h4{
+  padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2{
+  padding: 40px 0 20px 0;
+  font-size: 26px
+}
+
+#prodetails .single-pro-details select{
+  display: block;
+  padding: 5px 10x;
+  margin-bottom: 10px;
+}
+
+
+#prodetails .single-pro-details input{
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#prodetails .single-pro-details input:focus{
+  outline: none;
+
+}
+
+
+#prodetails .single-pro-details button{
+  background-color: #088178;
+  color: #fff;
+
+}
+
+#prodetails .single-pro-details span{
+  line-height: 25px;
+}
+
+
+
+
+/* blog Page*/
+#blg-header{
+  height: 40vh;
+  width:  100%;
+    
+    position:relative;
+    place-items: center;
+    display: grid;
+
+    padding: 0 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #000000;
+    background-size: cover;
+    text-align: center;
+}
+
+#blg-header::before{
+  background-image: url("c63banner3.jpg");
+  background-size: cover;
+    /*background-position: top 25% right 0;*/
+    position:absolute;
+    inset:0;
+  content: '';
+  opacity: 0.10;
+}
+
+#blg-header h2{
+  color: #ffffff;
+}
+
+#blg-header p{
+  color: #f10b0b;
+}
+
+
+#blog{
+  padding: /* Top */ 150px  /* Right */150px /* bottom */0  /* left */150px;  
+
+}
+
+#blog .blog-box{
+  /* To Put thing in one row*/ 
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position:relative;
+  padding-bottom: 100px;
+}
+
+#blog .blog-img{
+  width: 50%;
+  margin-right: 40px;
+}
+
+#blog img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#blog .blog-details{
+  width: 50%;
+
+}
+
+#blog .blog-details a{
+  text-decoration: none;
+  font-size: 11px;
+  color:#000000;
+  font-weight: 700;
+  position: relative;
+  transition:0.02s;
+}
+
+/* When ever you use your position absolute inn your child element there must be a parent elemen to accept the:
+postion:reletive*/
+#blog .blog-details a::after{
+  content: " ";
+  width: 50px;
+  height: 1px;
+  background-color: #000000;
+  position:absolute;
+  top:7px;
+  right:-60px;
+}
+
+#blog .blog-details a:hover{
+  color:#088178;
+}
+
+#blog .blog-details a:hover::after{
+  background-color: #088178;
+}
+
+#blog .blog-box h1{
+  position: absolute;
+  top: -40px;
+  left:0;
+  font-size: 70px;
+  font-weight: 700;
+  color: #c9cbce;
+  z-index: -9; /*To pace an element behind an element you HAVE or you use z-index: negative!!!*/
+}
+
+/*  About Page */
+#About-header{
+  height: 40vh;
+  width:  100%;
+    
+    position:relative;
+    place-items: center;
+    display: grid;
+
+    padding: 0 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #000000;
+    background-size: cover;
+    text-align: center;
+}
+
+#About-header::before{
+  background-image: url("c63banner3.jpg");
+  background-size: cover;
+    /*background-position: top 25% right 0;*/
+    position:absolute;
+    inset:0;
+  content: '';
+  opacity: 0.10;
+}
+
+#About-header h2{
+  color: #fff;
+}
+
+#About-head{
+  display: flex;
+  align-items: center;
+}
+
+#About-head img{
+  width: 370px;
+  height: 370px;
+  margin-top: 35px;
+}
+
+#About-head div{
+  padding-left: 25px;
+
+}
+
+#about-app{
+  text-align: center;
+}
+
+#about-app .video{
+  width: 70%;
+  height: 100%;
+  margin-top: 30px;
+
+}
+
+#about-app .video video{
+  width: 500px;
+  height: 500px;
+  border:#088178;
+  border-radius: 50px;
+  margin-left: 340px;
+  background-color: #2b2929;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+/*Contact Page*/
+#contact_details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact_details .details{
+  width: 40%
+}
+
+#contact_details .details span,
+#form-details form span{
+  font-size: 12px;
+}
+
+#contact_details .details h2,
+#form-details h2{
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+#contact_details .details h3{
+  font-size: 16px;
+  padding-bottom:15px;
+}
+
+
+/*Below is how to remove the bullet points in a list and to put things from a column to row*/
+#contact_details .details li{
+  list-style: none; /* How to remove the bullet points*/
+  display:flex;
+  padding: 10px 0;
+}
+
+#contact_details .details li i{
+  font-size: 14px;
+  padding-right: 22px;
+}
+
+#contact_details .details li p{
+  margin:0;
+  font-size:14px;
+}
+
+#contact_details  .map{
+  width: 55%;
+  height: 400px;
+}
+
+#contact_details  .map iframe{
+  width:100%;
+  height: 100%;
+}
+
+#form-details{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 1px solid #e1e1e1;
+}
+
+#form-details form {
+  width: 65%;
+  /* To put elements from rows to columns you will have to use the display flex,  then the flex direction including flex start*/
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  margin-left: 90px;
+}
+
+#form-details form input,
+#form-details form textarea{
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1e1;
+}
+
+#form-details form button{
+  background-color: #088178;
+  color:#E3E6F3
+}
+
+#form-details.people div{
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#form-details .people img{
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+#form-details .people div p{
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+#form-details .people div p span{
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+
+/*Cart Page */
+
+#cart{
+
+  overflow-x: auto;
+
+}
+
+#cart table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table img{
+  width: 70px;
+
+}
+
+#cart table td:nth-child(1){
+  width: 100px;
+  text-align: center;
+}
+
+#cart table td:nth-child(2){
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(3){
+  width: 250px;
+  text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(5) input{
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+
+#cart table thead{
+  border: 1px solid #e2e9e1;
+  border-left: none;
+  border-right: none;
+
+}
+
+#cart table thead td{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 18px 0;
+}
+
+#cart table tbody tr td{
+  padding-top: 15px;
+}
+
+#cart table tbody td{
+  font-size: 13px;
+
+}
+
+#cart-add{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#coupon{
+  width: 50%;
+  margin-bottom: 30px;
+
+}
+
+#coupon h3,
+#Subtotal h3{
+  padding-bottom: 15px;
+}
+
+#coupon input{
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #e2e9e1;
+}
+
+#coupon button,
+#Subtotal button{
+  background-color: #088178;
+  color: #fff;
+  padding: 12px 20px;
+}
+
+#Subtotal{
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #e2e9e1;
+  padding: 30px;
+}
+
+#Subtotal table{
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#Subtotal table td{
+  width: 50%;
+  border: 1px solid #e2e9e1;
+  padding: 10px;
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Query*/
+/* Below is the code that will be used on the tablet devices */
+@media (max-width: 799px){
+
+  .section-p1{
+    padding: 40px 40px;
+
+    }
+  #navigationBar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position:fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgb(0, 0, 0, 0.01);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  #navigationBar.active{
+    right: 0px;
+  }
+  #navigationBar li{
+    margin-bottom: 25px;
+
+  }
+
+  #mobile{
+    display: flex;
+    align-items: center;
+  
+  }
+
+  #mobile i{
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+
+  }
+
+  #close{
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+  }
+
+  #lg-bag{
+    display: none;
+  }
+
+  #hero{
+      height: 70vh;
+      padding: 0 80px;
+      background-position: top 30% right 30%;
+  }
+
+  #feature{
+    justify-content: center; 
+
+  }
+
+  #feature .fe-box{
+    margin: 15px 15px;
+  }
+
+  #banner{
+ 
+    height: 20vh;
+ }
+
+   #sm-banner .banner-box{ 
+   
+    height: 30vh;
+    min-width:  100%;
+  }
+
+  #banner3{
+    padding: 0 40px;
+  
+  }
+
+  #banner3 .banner-box{
+    width:  28%;
+  }
+
+  #newsletter .Form{
+  
+    width: 70%;
+  }
+
+
+  /* Contact Page */
+  #form-details{
+ 
+    padding: 40px;
+
+  }
+
+  #form-details form{
+    width: 50%;
+  }
+
+
+  /* Cart Page */
+
+
+
+
+}
+
+/* Below is the code that will be used on the mobile devices or phones rather*/
+@media(max-width: 477px){
+
+  .section-p1{
+    padding: 20px;
+
+  }
+
+  #header{
+    padding: 10px 30px;
+  }
+
+  h2{
+    font-size: 32px;
+  }
+
+  h1{
+    font-size: 38px;
+  }
+
+  #hero{
+    padding: 0 20px;
+    background-position: 55%;
+  }
+
+  #feature .fe-box{
+    width: 155px;
+    margin: 0 0 15px 0;
+
+
+  }
+
+  #feature{
+    justify-content: space-between; 
+  }
+
+  #banner{
+    height: 40vh;
+  }
+
+ #sm-banner .banner-box{    
+    height: 40vh;
+  }
+
+  #banner3 .banner-box2{
+    margin-top: 20px;
+  }
+
+  #banner3{
+    padding: 0 20px;
+  
+  }
+
+  #banner3 .banner-box{
+    width:  100%;
+  }
+
+  #newsletter{
+    padding: 40px 20px;
+  
+  }
+
+  #newsletter .Form{
+    width: 100%;
+  }
+
+   /* Single Product*/
+
+   #prodetails{
+    display:flex;
+    flex-direction: column;
+   
+  }
+
+   #prodetails .single-pro-image{
+    width: 100%;
+    margin-right: 0px;
+  }
+
+
+   #prodetails .single-pro-details{
+    width: 100%;
+  }
+
+  /*blog */
+  #blog .blog-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #blog{
+    padding: /* Top */ 100px  /* Right */20px /* bottom */0  /* left */20px;  
+  
+  }
+
+  #blog .blog-img{
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 30px;
+  }
+
+  #blog .blog-details{
+    width: 100;
+    
+  }
+
+  /*About */
+  #About-head{
+    flex-direction: column;
+  }
+
+  #About-head img{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #About-head div{
+    padding-left: 0px;
+  }
+
+  #about-app .video{
+    width: 100%;
+  }
+
+  /* Contact Page */
+
+  #contact-details{
+    flex-direction: column;
+  }
+
+  #contact-details .details{
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  #contact-details .map{
+    width: 100%;
+  }
+
+  #form-details{
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
+
+  #form-details form{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+
+  /* Cart Page*/
+  #cart-add{
+    flex-direction: column;
+
+  }
+
+  #coupon{
+    width:100%;
+  }
+
+  #subtotal{
+    width: 100%;
+    padding: 20px
+  }
+  
+
+}
+

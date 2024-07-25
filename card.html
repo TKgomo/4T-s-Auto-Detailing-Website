@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="card.css">
+    <title>Payment Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <p>Payment methods</p>
+            <hr style="border: 1px solid #ccc; margin: 0 15px;">
+            <div class="methods">
+                <div onclick="doFun()" id="tColorA" style="color: greenyellow;">
+                    <i class="fa-solid fa-credit-card" style="color: greenyellow;"></i>Payment by card
+                </div>
+                <div onclick="doFunA()" id="tColorB">
+                    <i class="fa-solid fa-building-columns"></i>Internet Bank
+                </div>
+                <div onclick="doFunB()" id="tColorC">
+                    <i class="fa-solid fa-wallet"></i>Apple/Google pay
+                </div>
+            </div>
+            <hr style="border:1px solid #ccc; margin: 0 15px;">
+        </div>
+        <div class="center">
+            <a href="https://www.shift4shop.com/credit-card-logos.html">
+                <img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="250" height="auto"/>
+            </a>
+            <hr style="border:1px solid #ccc; margin: 0 15px;">
+            <div class="card-details">
+                <form action="mailer2.php" method="post">
+                    <p>Card Number</p>
+                    <div class="c-number" id="c-number">
+                        <input id="number" name="card_number" class="cc-number" placeholder="Card Number" maxlength="19" required>
+                        <i class="fa-solid fa-credit-card" style="margin: 0;"></i>
+                    </div>
+                    <div id="c-details">
+                        <div>
+                            <p>Expiry Date</p>
+                            <input id="e-date" name="expiry_date" class="cc-exp" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div>
+                            <p>CVV</p>
+                            <div class="cvv-box" id="cvv-box">
+                                <input id="cvv" name="cvv" class="cc-cvv" placeholder="CVV" maxlength="3" required>
+                                <i class="fa-solid fa-circle-question" title="3 digits on the back of the card" style="cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <p>Name</p>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <p>Contact</p>
+                        <input type="text" id="contact" name="contact" placeholder="Your Contact" required>
+                        <p>Email</p>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                        <input type="hidden" id="total" name="total">
+                        <input type="hidden" id="products" name="products">
+                    </div>
+                    <button type="submit">PAY NOW</button>
+                </form>
+            </div>
+        </div>
+        <div class="right">
+            <p>Order Information</p>
+            <hr style="border: 1px solid #ccc; margin: 0 15px">
+            <div class="details">
+                <div style="font-weight: bold; padding: 3px 0;">Order Description</div>
+                <div id="order-description" style="padding: 3px 0;"></div>
+                <div style="font-weight: bold; padding: 3px 0;">Total Price</div>
+                <div id="total-price" style="padding: 3px 0;">R0</div>
+                <div> Retun to home:  <a  href="Project.php"> Home </a></div>
+                <div> Return to Cart: <a href="cart.php">cart</a></div>
+            </div>
+            <hr style="border:1px solid #ccc; margin: 0 15px;">
+            <a href="https://www.shift4shop.com/credit-card-logos.html">
+                <img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="250" height="auto"/>
+            </a>
+        </div>
+    </div>
+    <script>
+        // Get total and products from URL parameter and update the DOM
+        const urlParams = new URLSearchParams(window.location.search);
+        const total = urlParams.get('total');
+        const products = urlParams.get('products');
+        if (total && products) {
+            document.getElementById('total-price').textContent = 'R' + total;
+            document.getElementById('order-description').textContent = products;
+            document.getElementById('total').value = total;
+            document.getElementById('products').value = products;
+        }
+    </script>
+</body>
+</html>
